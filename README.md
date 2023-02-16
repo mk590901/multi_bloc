@@ -26,7 +26,7 @@ The AccountBloc class implements operations with the Account manager, the Action
 
 ## Chart describing the state machine for account management
 
-//IMAGE
+![image](https://user-images.githubusercontent.com/125393245/219486404-8f9fb01e-a73c-4b18-84b3-cf8039934b02.png)
 
 ## Class describing the state machine for account management
 
@@ -34,7 +34,7 @@ I omit the implementation details, the code can be found in the repository, but 
 
 ## Chart describing the state machine for account actions
 
-//IMAGE
+![image](https://user-images.githubusercontent.com/125393245/219486636-2a73f79e-367f-4d3f-b360-bbb5f3628fe4.png)
 
 ## Class describing the state machine for account actions
 
@@ -44,4 +44,6 @@ Create method in the ActionStateMachine class describes the state machine depict
 ## Media file
 
 
-//MP4
+https://user-images.githubusercontent.com/125393245/219485989-8cb06023-1255-4748-969a-1bf3e578deb4.mp4
+
+
