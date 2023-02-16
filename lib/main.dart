@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'widgets/home_page.dart';
 
-//  https://github.com/micrcx/flutter/tree/master
+//  https://github.com/mk590901/multi_bloc
 
 void main() {
   runApp(const MyApp());
