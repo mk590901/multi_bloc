@@ -1,0 +1,3 @@
+class AccountRepository {
+  const AccountRepository();
+}
