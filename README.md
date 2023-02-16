@@ -1,16 +1,47 @@
 # multi_bloc
 
-A new Flutter project.
+Flutter in action. BloC
 
-## Getting Started
+## Introduction
 
-This project is a starting point for a Flutter application.
+BLoC in relation to flutter involves the use in GUI approaches related to the state machines. This is evidenced by the terminology: events, states, transactions & etc, and, of course, ready-made implementation at the package level dart_bloc and flutter_bloc.
 
-A few resources to get you started if this is your first Flutter project:
+On the Internet you can find a lot of technical information about BLoC. However, for an ordinary programmer, only real implementations are of interest. I found only two articles from which you can learn something useful:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+1) https://itnext.io/flutter-blocs-at-scale-1-the-state-machine-fce5f086d7b9 
+2) https://medium.com/flutter-community/flutter-bloc-for-beginners-839e22adb9f5
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+The first article in a more or less sane form explains why BLoC is worth using, and the second one shows a complete application using BloC.
+
+The only thing that surprised me in these articles, and in all the others that I found on the Internet and in the documentation, was that BLoC initially lack a way to describe the state machine in a simple sane form. The transition logic is described mostly in events and scattered throughout the code and this makes it difficult to implement and understand the code.
+
+I decided to fill this gap and try to use the approach that I have repeatedly used earlier when writing my applications, if I needed to use flat state machines. I just added to the BLoC class a reference to a class that describes the of state machine and implements transitions from state to state and connected the events of BLoC with the events of the FSM.
+
+So, I decided to implement account manager using BLoC. I.e. create a system that allows you to register a user, perform login and logout, unregister, and also update user data if he is logged in. In general, everything that is described in this article: https://itnext.io/flutter-blocs-at-scale-1-the-state-machine-fce5f086d7b9. The only remark: I didn't copy the approach presented in the article one-to-one. However, the meaning of what I did completely fits into the principles outlined in the article. Well, maybe with a few exceptions connected to temporary states.
+
+## Brief description of the application
+
+The Account manager is represented by a mock AccountManager that implements the register, unregister, login, logout and refresh operations. An element of chance has been added: any operation can end both successfully and erroneously.
+The AccountBloc class implements operations with the Account manager, the ActionBloc class intent the visualisation of completing these operations. Relevant widgets: AccountStatesPanelWidget and ActionsPanelWidget.
+
+## Chart describing the state machine for account management
+
+//IMAGE
+
+## Class describing the state machine for account management
+
+I omit the implementation details, the code can be found in the repository, but trust that the create method in the AccountStateMachine class unambiguously describes the state machine depicted in the chart above.
+
+## Chart describing the state machine for account actions
+
+//IMAGE
+
+## Class describing the state machine for account actions
+
+Create method in the ActionStateMachine class describes the state machine depicted in the chart above.
+
+
+## Media file
+
+
+//MP4
