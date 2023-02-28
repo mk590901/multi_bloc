@@ -15,6 +15,7 @@ class ActionState {
   ActionStates state() {
     return _state;
   }
+
   void setMessage(String? message) {
     _message = message;
   }
