@@ -29,3 +29,4 @@ class Failed extends Event {
     return cause;
   }
 }
+
